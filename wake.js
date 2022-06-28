@@ -16,7 +16,6 @@ let startWakeLock=async function(){
 	}
 }
 const handleVisibilityChange = async function(){
-	console.log('hello');
 	document.title = 'Starting - Wakelock';
 	stat.innerText='Activating...';
 	if (wakeLock !== null){

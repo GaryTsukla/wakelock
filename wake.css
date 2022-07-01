@@ -1,0 +1,116 @@
+*{
+	box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+    font-size: 105%;
+    color:white;
+    background:radial-gradient(circle,#4a054a,#680968);
+    background-size:100%;
+    /* background-repeat:repeat; */
+    background-position:center;
+    margin:0;
+    padding:0;
+    animation:slideBackground 4s ease-in-out infinite;
+}
+main{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1em;
+    gap:1em;
+}
+h1{
+	font-size: 4em;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;
+    font-family: cursive,Arial;
+}
+p{
+	padding:0;
+	margin:0;
+}
+button{
+    display: block;
+    background: #48525c;
+    padding: 1em;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    border-radius: 1em;
+    border: 0.2em solid #d3d2d2;
+    color: #d3d2d2;
+    cursor:pointer;
+    transition:all 0.2s ease;
+}
+button:hover{
+    border-style: outset;
+    background: #2d343a;
+    border-color:#fff;
+    color: #fff;
+}
+footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0.5em;
+}
+.flexNav {
+    display: flex;
+    align-items: center;
+    gap:0.5em;
+  }
+.svg{
+    display:inline-block;
+    width:2em;
+    color:#fff8;
+    position:relative;
+}
+.svg:hover,.svg:active{
+    color:#fff;
+}
+.svg:hover::after,.svg:active::after{
+    content:attr(aria-label);
+    position:absolute;
+    bottom:calc(100% + 0.5em);
+    left: 50%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    padding: 0.5em 1em;
+    line-height: 1em;
+    font-size: .9em;
+    font-weight: normal;
+    color: #fff;
+    text-shadow: 1px 0 1px #888;
+    background-color: #000b;
+    border-radius: 0.5em;
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+}
+.svg:hover::before,.svg:active::before{
+    content: " ";
+    position: absolute;
+    bottom: calc(100% + 0.5em);
+    left: 50%;
+    margin-left: -0.3em;
+    margin-bottom:-0.6em;
+    border-width: 0.3em;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+@keyframes slideBackground{
+    0%,100%{
+        background-size:100%;
+    }
+    50%{
+        background-size:400%;
+    }
+}
